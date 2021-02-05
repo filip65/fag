@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(hsl(273, 75%, 66%),  hsl(240, 73%, 65%));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    max-width: 920px;
+    width: 90%;
+    height: 500px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.card .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateY(-5.5rem);
+    width: auto;
+}
+
+.card .logo-container .logo{
+    margin-right: 20px;
+}
+
+.card .logo-container .pattern{
+    position: absolute;
+    transform: translateY(3.8rem);
+}
+
+.desktop{
+    display: none;
+}
+
+
+
+.card h1{
+    font-size: 2rem;
+    margin-top: -25px;
+
+}
+
+.questions{
+    margin: 20px 25px 50px;
+}
+
+.question-container{
+    position: relative;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    text-align: left;
+    color: hsl(238, 29%, 16%);
+}
+
+.click{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* z-index: 100; */
+    top: 0;
+}
+
+.question-container .question{
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-container .question img{
+    width: 12px;
+    height: 10px;
+}
+
+.question-container > p{
+    display: none;
+}
+
+.question-container img{
+    transition: 0.4s transform;
+}
+
+.question p{
+    transition: 0.2s color;
+}
+
+.active > p {
+    display: block;
+    padding-bottom: 18px;
+}
+
+.active img {
+    transform: rotate(180deg);
+}
+
+.active .question p{
+    font-weight: bold;
+}
+
+@media(min-width: 1000px){
+    .card{
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card .card-text {
+        flex: 1;
+    }
+
+    .card .logo-container{
+        transform: translateY(0);
+        flex: 1;
+    }
+
+    .card-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .questions{
+        margin: 0;
+        width: 350px;
+    }
+
+    .card h1{
+        text-align: left;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .logo{
+        transform: translateX(-5rem);
+    }
+
+    .logo-container{
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .box{
+        position: absolute;
+        left: -5.8rem;
+        top: 13rem;
+    }
+
+    .card .logo-container .pattern{
+        width: 1000px;
+       transform: translate(-22rem,-4rem);
+       z-index: -100;
+    }
+}
